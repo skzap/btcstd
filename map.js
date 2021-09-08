@@ -1,20 +1,35 @@
-let btcToDollar = 46000
-let gdpWorld = 80934771028340
-let populationWorld = 7674000000
-
-// loading countries.json
+const gdpWorld = 80934771028340
+const populationWorld = 7674000000
 let countries = {}
-let xobj = new XMLHttpRequest()
-xobj.overrideMimeType("application/json")
-xobj.open('GET', 'countries.json', true)
-xobj.onreadystatechange = function () {
-    if (xobj.readyState == 4 && xobj.status == "200") {
-        countries = JSON.parse(xobj.responseText)
-        drawMap()
+
+loadBitcoinPrice()
+
+function loadBitcoinPrice() {
+    let xobj = new XMLHttpRequest()
+    xobj.overrideMimeType("application/json")
+    xobj.open('GET', 'https://blockchain.info/ticker', true)
+    xobj.onreadystatechange = function () {
+        if (xobj.readyState == 4 && xobj.status == "200") {
+            btcToDollar = JSON.parse(xobj.responseText).USD["15m"]
+            loadCountries()
+        } 
     }
-        
+    xobj.send(null)
 }
-xobj.send(null)
+
+function loadCountries() {
+    let xobj = new XMLHttpRequest()
+    xobj.overrideMimeType("application/json")
+    xobj.open('GET', 'countries.json', true)
+    xobj.onreadystatechange = function () {
+        if (xobj.readyState == 4 && xobj.status == "200") {
+            countries = JSON.parse(xobj.responseText)
+            drawMap()
+        }
+            
+    }
+    xobj.send(null)
+}
 
 function drawMap() {
     let gdpTotal = 0
