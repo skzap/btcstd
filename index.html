@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="lib/tachyons.min.css">
+    <link href="lib/svgMap.min.css" rel="stylesheet">
+    <title>The Bitcoin Standard</title>
+    <link rel="icon" href="favicon.ico">
+</head>
+<body class="bg-gold pa4 tc">
+    <span class="f1 bg-black-80 lh-copy white pa1 tracked-tight">The Bitcoin Standard</span>
+    <div class="mw9 center ph3-ns">
+        <div class="cf ph2-ns">
+          <div class="fl w-100 pa2">
+            <div id="svgMap"></div>
+          </div>
+        </div>
+    </div>
+
+    <div class="mw9 center ph3-ns">
+        <div class="cf ph2-ns">
+            <div class="fl w-10 pa2"></div>
+            <div class="fl w-40 pa2 f2">
+                <span class="f2 bg-black-80 lh-copy white pa1 tracked-tight">
+                    <span id='gdpPerc'></span>%</span>
+                of the global GDP
+            </div>
+            <div class="fl w-40 pa2 f2">
+                <span class="f2 bg-black-80 lh-copy white pa1 tracked-tight">
+                    <span id='popPerc'></span>%</span>
+                of the world population
+            </div>
+        </div>
+    </div>
+
+    <article class="pa3 pa2-ns" data-name="slab-stat">
+        <dl class="dib mr5">
+            <dd class="f6 f5-ns ml0 b">Countries</dd>
+            <dd class="f3 f2-ns ml0"><span id='totalC'></span></dd>
+        </dl>
+        <dl class="dib mr5">
+            <dd class="f6 f5-ns ml0 b">GDP (BTC)</dd>
+            <dd class="f3 f2-ns ml0"><span id='gdpTot'></span></dd>
+        </dl>
+        <dl class="dib mr5">
+            <dd class="f6 f5-ns ml0 b">Population</dd>
+            <dd class="f3 f2-ns ml0"><span id='popTot'></span></dd>
+        </dl>
+        <dl class="dib mr5">
+            <dd class="f6 f5-ns ml0 b">Latest</dd>
+            <dd class="f3 f2-ns ml0"><span id='newC'></span></dd>
+        </dl>
+        <dl class="dib mr5">
+            <dd class="f6 f5-ns ml0 b">Upcoming</dd>
+            <dd class="f3 f2-ns ml0"><span id='nextC'></span></dd>
+        </dl>
+    </article>
+
+    <footer class="pa3">
+        <!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/skzap/dtube/issues" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-size="large" data-show-count="true" aria-label="Issue skzap/dtube on GitHub">Issue</a>
+    </footer>
+
+    <script src="lib/svg-pan-zoom.min.js"></script>
+    <script src="lib/svgMap.min.js"></script>
+    <script src="map.js"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>
