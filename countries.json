@@ -7,5 +7,14 @@
         "link":"https://www.asamblea.gob.sv/node/11282",
         "name":"El Salvador",
         "population":6454000
+    },
+    "CAF":{
+        "date_enacted":"26 April 2022",
+        "date_effective":"26 April 2022",
+        "flag": "🇨🇫",
+        "gdp_dollar":2303000000,
+        "link":"https://twitter.com/BitcoinMagazine/status/1519306253016743943",
+        "name":"Central African Republic",
+        "population":4830000
     }
 }
