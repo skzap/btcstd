@@ -36,10 +36,10 @@ function drawMap() {
     let popTotal = 0
     let countriesTotal = 0
     let newCountry = {
-        date_effective: 0
+        date_effective: '4 Jan 2009'
     }
     let nextCountry = {
-        date_effective: Infinity,
+        date_effective: '4 Jan 2009',
         name: "N/A",
         flag: "🏴‍☠️"
     }
@@ -63,10 +63,10 @@ function drawMap() {
             countries[code].color = 'lightgreen'
         }
 
-        if (effective < now && effective > newCountry.date_effective)
+        if (effective < now && effective > Date.parse(newCountry.date_effective))
             newCountry = countries[code]
 
-        if (now < effective && effective < nextCountry.date_effective)
+        if (now < effective && effective < Date.parse(nextCountry.date_effective))
             nextCountry = countries[code]
     }
 
