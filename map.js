@@ -72,6 +72,8 @@ function drawMap() {
 
     console.log(countries)
 
+    btcPrice.innerHTML = btcToDollar.toLocaleString()
+
     gdpPerc.innerHTML = (100*btcToDollar*gdpTotal/gdpWorld).toFixed(2)
     gdpTot.innerHTML = gdpTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 
@@ -79,6 +81,7 @@ function drawMap() {
     popTot.innerHTML = popTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 
     totalC.innerHTML = countriesTotal
+    totalC2.innerHTML = countriesTotal
     newC.innerHTML = newCountry.name+" "+newCountry.flag
     nextC.innerHTML = nextCountry.name+" "+nextCountry.flag
 

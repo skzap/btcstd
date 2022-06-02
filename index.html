@@ -16,56 +16,74 @@
     <script src="map.js"></script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
-<body class="bg-gold pa4 tc">
-    <span class="f1 bg-black-80 lh-copy white pa1 tracked-tight">The Bitcoin Standard</span>
-    <div class="mw9 center ph3-ns">
-        <div class="cf ph2-ns">
-          <div class="fl w-100 pa2">
-            <div id="svgMap"></div>
-          </div>
-        </div>
-    </div>
-
-    <div class="mw9 center ph3-ns">
-        <div class="cf ph2-ns">
-            <div class="fl w-10 pa2"></div>
-            <div class="fl w-40 pa2 f2">
-                <span class="f2 bg-black-80 lh-copy white pa1 tracked-tight">
-                    <span id='gdpPerc'></span>%</span>
-                of the global GDP
-            </div>
-            <div class="fl w-40 pa2 f2">
-                <span class="f2 bg-black-80 lh-copy white pa1 tracked-tight">
-                    <span id='popPerc'></span>%</span>
-                of the world population
+<body>
+    <div class="tc bg-gold pa4">
+        <span class="f1 bg-black-80 lh-copy white pa1 tracked-tight">Bitcoin Standard Map</span>
+        <div class="mw9 center ph3-ns">
+            <div class="cf ph2-ns">
+              <div class="fl w-100 pa2">
+                <div id="svgMap"></div>
+              </div>
             </div>
         </div>
+    
+        <div class="mw9 center ph3-ns">
+            <div class="cf ph2-ns">
+                <div class="fl w-10 pa2"></div>
+                <div class="fl w-40 pa2 f2">
+                    <span class="f2 bg-black-80 lh-copy white pa1 tracked-tight">
+                        <span id='gdpPerc'></span>%</span>
+                    of the global GDP
+                </div>
+                <div class="fl w-40 pa2 f2">
+                    <span class="f2 bg-black-80 lh-copy white pa1 tracked-tight">
+                        <span id='popPerc'></span>%</span>
+                    of the world population
+                </div>
+            </div>
+        </div>
+    
+        <article class="pa3 pa2-ns" data-name="slab-stat">
+            <dl class="dib mr5">
+                <dd class="f6 f5-ns ml0 b">Countries</dd>
+                <dd class="f3 f2-ns ml0"><span id='totalC'></span></dd>
+            </dl>
+            <dl class="dib mr5">
+                <dd class="f6 f5-ns ml0 b">GDP (BTC)</dd>
+                <dd class="f3 f2-ns ml0"><span id='gdpTot'></span></dd>
+            </dl>
+            <dl class="dib mr5">
+                <dd class="f6 f5-ns ml0 b">Population</dd>
+                <dd class="f3 f2-ns ml0"><span id='popTot'></span></dd>
+            </dl>
+            <dl class="dib mr5">
+                <dd class="f6 f5-ns ml0 b">Latest</dd>
+                <dd class="f3 f2-ns ml0"><span id='newC'></span></dd>
+            </dl>
+            <dl class="dib mr5">
+                <dd class="f6 f5-ns ml0 b">Upcoming</dd>
+                <dd class="f3 f2-ns ml0"><span id='nextC'></span></dd>
+            </dl>
+        </article>
     </div>
 
-    <article class="pa3 pa2-ns" data-name="slab-stat">
-        <dl class="dib mr5">
-            <dd class="f6 f5-ns ml0 b">Countries</dd>
-            <dd class="f3 f2-ns ml0"><span id='totalC'></span></dd>
-        </dl>
-        <dl class="dib mr5">
-            <dd class="f6 f5-ns ml0 b">GDP (BTC)</dd>
-            <dd class="f3 f2-ns ml0"><span id='gdpTot'></span></dd>
-        </dl>
-        <dl class="dib mr5">
-            <dd class="f6 f5-ns ml0 b">Population</dd>
-            <dd class="f3 f2-ns ml0"><span id='popTot'></span></dd>
-        </dl>
-        <dl class="dib mr5">
-            <dd class="f6 f5-ns ml0 b">Latest</dd>
-            <dd class="f3 f2-ns ml0"><span id='newC'></span></dd>
-        </dl>
-        <dl class="dib mr5">
-            <dd class="f6 f5-ns ml0 b">Upcoming</dd>
-            <dd class="f3 f2-ns ml0"><span id='nextC'></span></dd>
-        </dl>
-    </article>
-
-    <footer class="pa3">
+    <div class="pa2 pa4-m pa6-l">
+        <h2>What is Bitcoin?</h2>
+        <p class="f4">
+            Bitcoin <span class="b">(BTC)</span> is a form of payment that acts as money in the <span id="totalC2"></span> countries that adopted it as legal tender.
+            This currency is not controlled by any individual, company, or central bank, and completely eliminated the need to trust intermediaries when doing digital financial transactions.
+            <br /><br />
+            Bitcoin has a maximum supply of <span class="b">21,000,000 BTC</span>, but can be used up to 8 decimals points. The smallest unit (0.00000001 BTC) is called a <span class="b">Satoshi</span>, or <span class='b'>sat</span>,
+            in honor of the anonymous developer who used the alias <span class="i">"Satoshi Nakamoto"</span> to publish the <a href="https://bitcoin.org/bitcoin.pdf">whitepaper</a> in October 2008, 
+            and launch the network in January 2009. His last message was in December 2010 on the bitcointalk forum.
+            <br /><br />
+            Since then, the Bitcoin network has grown exponentially and remained the most popular and valuable cryptocurrency. One Bitcoin is currently worth 
+            <span class="b">$<span id="btcPrice"></span></span>.
+            .
+        </p>
+     </div>
+ 
+    <footer class="pa3 tc">
         <a class="github-button" href="https://github.com/skzap/btcstd/issues" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-show-count="true" aria-label="Issue skzap/btcstd on GitHub">Issue</a>
     </footer>
 </body>
